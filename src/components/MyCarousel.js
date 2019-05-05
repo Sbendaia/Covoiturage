@@ -7,11 +7,12 @@ import "./MyCarousel.css";
 
 export default class MyCarousel extends Component {
   render() {
+    let road3 = "road3.jpg";
     return (
       <div>
         <Carousel autoplay>
           <div>
-            <h1>Find Your destination</h1>
+            <h1>Find a ride</h1>
           </div>
           <div>
             <h1>Meet New People</h1>

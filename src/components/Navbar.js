@@ -25,8 +25,6 @@ export default class Navbar extends Component {
           />
         </Col>
         <Col span={8}>
-        
-        
           <Button
             style={{
               float: "right",
