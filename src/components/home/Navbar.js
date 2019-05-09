@@ -1,9 +1,10 @@
 import React, { Component } from "react";
-import { Input, Icon, Button, DatePicker, Radio, Col, Row } from "antd";
+import { Input, Button, Col, Row } from "antd";
 import "antd/dist/antd.css";
 import logow from "./logow.png";
+import { connect } from "react-redux";
 const Search = Input.Search;
-export default class Navbar extends Component {
+class Navbar extends Component {
   render() {
     return (
       <Row style={navStyle}>
@@ -26,6 +27,20 @@ export default class Navbar extends Component {
         </Col>
         <Col span={8}>
           <Button
+            href="/form"
+            style={{
+              float: "right",
+              width: "80px",
+              marginTop: "15px",
+              marginRight: "8px",
+              borderColor: "#e6b30e",
+              color: "#e6b30e"
+            }}
+          >
+            Post
+          </Button>
+          <Button
+            href="/signin"
             style={{
               float: "right",
               width: "80px",
@@ -38,6 +53,7 @@ export default class Navbar extends Component {
             Login In
           </Button>
           <Button
+            href="/signup"
             style={{
               float: "right",
               width: "90px",
@@ -47,7 +63,7 @@ export default class Navbar extends Component {
               color: "#e6b30e"
             }}
           >
-            Sign In
+            Sign Up
           </Button>
         </Col>
       </Row>
@@ -55,12 +71,13 @@ export default class Navbar extends Component {
   }
 }
 const navStyle = {
-  position: "fixed",
+  position: "relative",
   width: "100%",
   height: "70px",
   borderBottom: "inset",
   padding: "0",
   margin: "0",
+
   borderColor: "#e6b30e",
   backgroundColor: "#4682B4"
 };
@@ -71,3 +88,8 @@ const logoStyle = {
   marginTop: "10px",
   marginLeft: "20px"
 };
+const mapStateToProps = state => {
+  console.log(state);
+  return {};
+};
+export default connect(mapStateToProps)(Navbar);

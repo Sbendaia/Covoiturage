@@ -1,0 +1,62 @@
+form {
+  font-family: Cambria;
+  font-size: 20px;
+  padding: 10px;
+  width: 500px;
+  margin: auto;
+  background-color: rgb(184, 201, 195);
+  border-radius: 5px;
+}
+button {
+  padding: 1opx;
+  margin: 10px;
+  width: 100px;
+  text-align: center;
+  font-family: Cambria;
+  font-size: 17px;
+}
+
+input,
+select,
+option {
+  border-radius: 5px;
+  border-color: darkslategray;
+  border-style: solid;
+  height: 30px;
+  border-width: 1px;
+  width: 180px;
+  text-align: center;
+}
+p {
+  text-align: justify;
+}
+label {
+  border-color: darkslategray;
+  border-radius: 5px;
+  display: inline-block;
+  border-style: solid;
+  padding: 5px;
+  width: 180px;
+  background-color: white;
+  color: darkslategray;
+  text-align: center;
+  height: 30px;
+
+  margin: 8px;
+  padding: 1px;
+  margin-left: 40px;
+}
+button {
+  background-color: white;
+  border-radius: 5px;
+  border-color: green;
+  border-style: solid;
+  height: 30px;
+  border-width: 1px;
+  width: 180px;
+  text-align: center;
+  color: green;
+}
+#id1 {
+  width: 176px;
+}
