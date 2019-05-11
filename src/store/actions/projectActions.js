@@ -7,8 +7,8 @@ export const postARide = post => {
       .collection("posts")
       .add({
         ...post,
-        authorFirstName: profile.firstName,
-        authorLastName: profile.lastName,
+        authorFirstName: "Siham",
+        authorLastName: "Bendaia",
         authorId: authorId,
         createdAt: new Date()
       })
