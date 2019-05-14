@@ -1,4 +1,6 @@
 .login-form {
+  margin-top: 40px;
+  margin-left: 70px;
   max-width: 300px;
 }
 .login-form-forgot {
@@ -6,4 +8,13 @@
 }
 .login-form-button {
   width: 100%;
+}
+#titre1 {
+  margin-top: 40px;
+  margin-left: 40%;
+  color: #e6b30e;
+}
+#content1 {
+  margin-left: 40%;
+  color: grey;
 }

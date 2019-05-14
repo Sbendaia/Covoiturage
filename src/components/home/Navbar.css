@@ -1,0 +1,66 @@
+.navbar {
+  position: relative;
+  width: 100%;
+  height: 70px;
+  border-bottom: inset;
+  padding: 0;
+  margin: 0;
+
+  border-color: #e6b30e;
+  background-color: #4682b4;
+}
+.search {
+  float: left;
+  width: 300px;
+  margin: 0px;
+  height: 30px;
+  border-color: #e6b30e;
+  margin-top: 15px;
+  color: #e6b30e;
+}
+.postButton {
+  width: 100px;
+  margin-left: 5px;
+  margin-top: 15px;
+
+  border-color: #e6b30e;
+  color: #e6b30e;
+}
+.login {
+  float: right;
+  width: 100px;
+  margin-top: 15px;
+  margin-right: 0px;
+  border-color: #e6b30e;
+  color: #e6b30e;
+}
+.signup {
+  float: right;
+  width: 100px;
+  margin-top: 15px;
+  margin-right: 8px;
+  border-color: #e6b30e;
+  color: #e6b30e;
+}
+.logo {
+  position: relative;
+  height: 50px;
+  padding: 0;
+  margin-top: 10px;
+  margin-left: 20px;
+}
+.avatar {
+  float: right;
+  margin-top: 12px;
+  margin-right: 5px;
+}
+.signOutButton {
+  float: right;
+  width: 100px;
+  margin: 0;
+  margin-top: 15px;
+  margin-right: 0;
+  margin-left: 0;
+  border-color: #e6b30e;
+  color: #e6b30e;
+}

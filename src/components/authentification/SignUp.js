@@ -56,7 +56,7 @@ class RegistrationForm extends Component {
 
   render() {
     const { auth } = this.props;
-    if (auth.uid) return <Redirect to="/" />;
+    // if (auth.uid) return <Redirect to="/" />;
     const { getFieldDecorator } = this.props.form;
 
     const formItemLayout = {

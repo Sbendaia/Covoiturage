@@ -3,6 +3,7 @@ import React, { Component } from "react";
 import { connect } from "react-redux";
 import * as actions from "../../store/actions/projectActions.js";
 import PropTypes from "prop-types";
+import { Input, Select, DatePicker, Button } from "antd";
 import { bindActionCreators } from "redux";
 
 class Formulaire extends Component {
@@ -24,7 +25,7 @@ class Formulaire extends Component {
   };
 
   onSubmit = e => {
-    e.preventDefault();
+    // e.preventDefault();
     this.props.actions.postARide(this.state);
     this.props.history.push("/");
   };
@@ -32,33 +33,33 @@ class Formulaire extends Component {
   render() {
     return (
       <div>
-        <form onSubmit={this.onSubmit}>
+        <form>
           <p>
             <label>Ville de départ</label>
-            <input id="villeD" onChange={this.onChange} />{" "}
+            <Input id="villeD" onChange={this.onChange} allowClear />{" "}
           </p>
           <p>
             <label>ville d'arrivée</label>
-            <input id="villeA" onChange={this.onChange} />
+            <Input id="villeA" onChange={this.onChange} allowClear />
           </p>
           <p>
             <label>Date</label>{" "}
-            <input type="date" id="date" onChange={this.onChange} />
+            <DatePicker id="date" onChange={this.onChange} />
           </p>
           <p>
             {" "}
             <label>Nombre de siége </label>
-            <input id="nbSiege" onChange={this.onChange} />
+            <Input id="nbSiege" onChange={this.onChange} />
           </p>
           <p>
             <label>Autoroute</label>
-            <select id="autoroute" onChange={this.onChange}>
+            <Select id="autoroute" onChange={this.onChange}>
               <option value={true}>Oui </option>
               <option value={false}>Non </option>
-            </select>
+            </Select>
           </p>
           <center>
-            <button type="submit">Rechercher</button>
+            <Button onClick={this.onSubmit}>Rechercher</Button>
           </center>
         </form>
       </div>

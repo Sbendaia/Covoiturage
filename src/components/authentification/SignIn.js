@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Form, Icon, Input, Button, Checkbox, Alert } from "antd";
+import { Form, Icon, Input, Button, Checkbox, Alert, Row, Col } from "antd";
 import { connect } from "react-redux";
 import { signIn } from "../../store/actions/authActions";
 import { Redirect } from "react-router-dom";
@@ -17,7 +17,7 @@ class NormalLoginForm extends Component {
   };
   handleSubmit = e => {
     e.preventDefault();
-    console.log(this.state);
+
     this.props.signIn(this.state);
   };
 
@@ -27,59 +27,71 @@ class NormalLoginForm extends Component {
     const { getFieldDecorator } = this.props.form;
     return (
       <div>
-        <Form onSubmit={this.handleSubmit} className="login-form">
-          <Form.Item>
-            {getFieldDecorator("userName", {
-              rules: [
-                { required: true, message: "Please input your username!" }
-              ]
-            })(
-              <Input
-                name="email"
-                prefix={
-                  <Icon type="user" style={{ color: "rgba(0,0,0,.25)" }} />
-                }
-                placeholder="Username"
-                onChange={this.handleChange}
-              />
-            )}
-          </Form.Item>
-          <Form.Item>
-            {getFieldDecorator("password", {
-              rules: [
-                { required: true, message: "Please input your Password!" }
-              ]
-            })(
-              <Input
-                name="password"
-                prefix={
-                  <Icon type="lock" style={{ color: "rgba(0,0,0,.25)" }} />
-                }
-                type="password"
-                placeholder="Password"
-                onChange={this.handleChange}
-              />
-            )}
-          </Form.Item>
-          <Form.Item>
-            {getFieldDecorator("remember", {
-              valuePropName: "checked",
-              initialValue: true
-            })(<Checkbox>Remember me</Checkbox>)}
-            <a className="login-form-forgot" href="">
-              Forgot password
-            </a>
-            <Button
-              type="primary"
-              htmlType="submit"
-              className="login-form-button"
-            >
-              Log in
-            </Button>
-            Or <a href="/signup">register now!</a>
-          </Form.Item>
-        </Form>
-        <div>{authError ? <Alert message={authError} /> : null}</div>
+        <Row>
+          <Col span={12}>
+            <h1 id="titre1">Blah blah blah blah</h1>
+            <h3 id="content1">
+              loAd culpa est non fugiat reprehenderit in consequat laborum.
+              Veniam tempor ipsum officia quis exercitation sunt elit dolor ad
+              pariatur ipsum.{" "}
+            </h3>
+          </Col>
+          <Col span={12}>
+            <Form onSubmit={this.handleSubmit} className="login-form">
+              <Form.Item>
+                {getFieldDecorator("userName", {
+                  rules: [
+                    { required: true, message: "Please input your username!" }
+                  ]
+                })(
+                  <Input
+                    name="email"
+                    prefix={
+                      <Icon type="user" style={{ color: "rgba(0,0,0,.25)" }} />
+                    }
+                    placeholder="Username"
+                    onChange={this.handleChange}
+                  />
+                )}
+              </Form.Item>
+              <Form.Item>
+                {getFieldDecorator("password", {
+                  rules: [
+                    { required: true, message: "Please input your Password!" }
+                  ]
+                })(
+                  <Input
+                    name="password"
+                    prefix={
+                      <Icon type="lock" style={{ color: "rgba(0,0,0,.25)" }} />
+                    }
+                    type="password"
+                    placeholder="Password"
+                    onChange={this.handleChange}
+                  />
+                )}
+              </Form.Item>
+              <Form.Item>
+                {getFieldDecorator("remember", {
+                  valuePropName: "checked",
+                  initialValue: true
+                })(<Checkbox>Remember me</Checkbox>)}
+                <a className="login-form-forgot" href="">
+                  Forgot password
+                </a>
+                <Button
+                  type="primary"
+                  htmlType="submit"
+                  className="login-form-button"
+                >
+                  Log in
+                </Button>
+                Or <a href="/signup">register now!</a>
+              </Form.Item>
+            </Form>
+            <div>{authError ? <Alert message={authError} /> : null}</div>
+          </Col>{" "}
+        </Row>
       </div>
     );
   }

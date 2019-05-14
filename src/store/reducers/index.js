@@ -6,6 +6,6 @@ import projectReducer from "./projectReducer";
 export default combineReducers({
   auth: authReducer,
   firebase: firebaseReducer,
-  firestore: firestoreReducer,
-  project: projectReducer
+  project: projectReducer,
+  firestore: firestoreReducer
 });
