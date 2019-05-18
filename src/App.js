@@ -7,13 +7,13 @@ import { BrowserRouter, Switch, Route } from "react-router-dom";
 import form from "./components/posting/postingForm";
 // import MyCarousel from "./components/MyCarousel.js";
 // import Cards from "./components/Cards";
-
+import Post from "./components/posts/Post";
 class App extends Component {
   render() {
     return (
       <BrowserRouter>
         <Navbar />
-   
+        <Post/>
         <div>
           <Switch>
             {/* <Route exact path="/" component={Navbar} /> */}

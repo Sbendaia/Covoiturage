@@ -20,7 +20,7 @@ class Navbar extends Component {
     return (
       <Row className="navbar">
         <Col span={8}>
-          <img src={logow} className="logo" />
+          <img src={logow} className="logo" alt="" />
         </Col>
         <Col span={8}>
           <Search
@@ -38,7 +38,6 @@ class Navbar extends Component {
   }
 }
 const mapStateToProps = state => {
-  console.log(state);
   return {
     auth: state.firebase.auth,
     profile: state.firebase.profile

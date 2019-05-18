@@ -1,9 +1,8 @@
-import firebase, { initializeApp, firestore } from "firebase/app";
+import firebase from "firebase/app";
 import "firebase/firestore";
 import "firebase/auth";
 import "firebase/database";
 
-import { truncate } from "fs";
 var config = {
   apiKey: "AIzaSyBONryiBGJ835Lm3u5b_jCTJ4K32z6xdVk",
   authDomain: "carpoolingproject-b98da.firebaseapp.com",
@@ -15,5 +14,5 @@ var config = {
 };
 // Initialize Firebase
 firebase.initializeApp(config);
-firebase.firestore().settings({ timestampsInSnapshots: truncate });
+//const db = firebase.firestore()
 export default firebase;

@@ -1,7 +1,7 @@
 import React, { Component } from "react";
-import { Form, Input, Row, Col, Checkbox, Button } from "antd";
+import { Form, Input, Button } from "antd";
 import { connect } from "react-redux";
-import { Redirect } from "react-router-dom";
+// import { Redirect } from "react-router-dom";
 import "./SignUp.css";
 import { signUp } from "../../store/actions/authActions";
 
@@ -55,7 +55,7 @@ class RegistrationForm extends Component {
   };
 
   render() {
-    const { auth } = this.props;
+    // const { auth } = this.props;
     // if (auth.uid) return <Redirect to="/" />;
     const { getFieldDecorator } = this.props.form;
 

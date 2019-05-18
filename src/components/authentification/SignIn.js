@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import { Form, Icon, Input, Button, Checkbox, Alert, Row, Col } from "antd";
 import { connect } from "react-redux";
 import { signIn } from "../../store/actions/authActions";
-import { Redirect } from "react-router-dom";
+// import { Redirect } from "react-router-dom";
 
 import "./SignIn.css";
 class NormalLoginForm extends Component {
@@ -22,7 +22,7 @@ class NormalLoginForm extends Component {
   };
 
   render() {
-    const { authError, auth } = this.props;
+    const { authError } = this.props;
     // if (auth.uid) return <Redirect to="/" />;
     const { getFieldDecorator } = this.props.form;
     return (
@@ -76,7 +76,7 @@ class NormalLoginForm extends Component {
                   valuePropName: "checked",
                   initialValue: true
                 })(<Checkbox>Remember me</Checkbox>)}
-                <a className="login-form-forgot" href="">
+                <a className="login-form-forgot" href="/signup">
                   Forgot password
                 </a>
                 <Button

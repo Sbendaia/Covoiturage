@@ -1,31 +1,19 @@
 import React from "react";
-import PropTypes from "prop-types";
-import { connect } from "react-redux";
-import { compose } from "redux";
-import { firestoreConnect } from "react-redux-firebase";
 import Post from "./Post";
-
-
-const Posts = props => {
-  const { posts } = props;
-  console.log(posts);
-  const postsList =
-    posts &&
-    posts.map(post => {
-      return <Post post={post} />;
+const Posts = () => {
+  fetch(
+    "https://us-central1-carpoolingproject-b98da.cloudfunctions.net/postsAPI"
+  )
+    .then(results => {
+      return results.json();
+    })
+    .then(data => {
+      data.map(post => {
+        console.log(post);
+      });
     });
-  return (
-    <div>
-      <h1>Posts</h1>
-      <ul>{postsList}</ul>
-    </div>
-  );
-};
-const mapStateToProps = state => {
-  return { posts: state.firestore.posts };
+
+  return <div />;
 };
 
-export default compose(
-  connect(mapStateToProps),
-  firestoreConnect([{ collection: "posts" }])
-)(Posts);
+export default Posts;
