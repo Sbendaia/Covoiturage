@@ -8,6 +8,12 @@ const projectReducer = (state = initState, action) => {
     // case 'CREATE_PROJECT_ERROR':
     //   console.log('create project error');
     //   return state;
+    case "SET_CITY_NAME":
+      return {
+        ...state,
+        ville: action.ville
+      };
+
     default:
       return state;
   }

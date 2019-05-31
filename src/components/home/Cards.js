@@ -4,7 +4,9 @@ import { Card, Col, Row } from "antd";
 export default class Cards extends Component {
   render() {
     return (
-      <div style={{ background: "white", padding: "30px", marginTop: "10px" }}>
+      <div
+        style={{ background: "#4682B4", padding: "30px", marginTop: "10px" }}
+      >
         <Row gutter={16}>
           <Col span={8}>
             <Card
@@ -25,7 +27,7 @@ export default class Cards extends Component {
               title={<span style={{ color: "#e6b30e" }}>Post a ride</span>}
               bordered={true}
               extra={
-                <a href="#" style={{ color: "#4682B4" }}>
+                <a href="/form" style={{ color: "#4682B4" }}>
                   Go
                 </a>
               }

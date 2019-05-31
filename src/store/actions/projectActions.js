@@ -20,3 +20,6 @@ export const postARide = post => {
       });
   };
 };
+export const setCityName = ville => {
+  return { type: "SET_CITY_NAME", ville };
+};

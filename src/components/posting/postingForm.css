@@ -1,11 +1,39 @@
-form {
+.postingForm {
+  margin-left: 30%;
+  border-color: grey;
+  border-radius: 5px;
+  border-style: solid;
+  padding-left: 50px;
+  padding-right: 50px;
+  width: 500px;
+  margin-top: 10px;
+}
+@font-face {
+  font-family: penguinAttack;
+  src: url(Quirlycues.ttf);
 }
 
-#input,
-#select,
-#option {
-  width: 180px;
+#villeA,
+#villeD,
+#autoroute,
+#nbSiege,
+#date,
+#prix {
+  width: 400px;
 }
+.header {
+  font-family: PenguinAttack;
 
-label {
- 
+  color: grey;
+  padding: 10px;
+  text-align: center;
+  margin-top: 0px;
+  font-size: 50px;
+}
+.postingButton {
+  
+  width: 100px;
+  border-radius: 5px;
+  border-style: solid;
+  border-color: #e6b30e;
+}

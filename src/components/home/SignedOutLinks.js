@@ -1,14 +1,16 @@
 import React from "react";
-import { Button } from "antd";
+import { Icon } from "antd";
+import { Link } from "react-router-dom";
 const SignedOutLinks = () => {
   return (
     <div>
-      <Button className="login" href="/signin">
-        Login In
-      </Button>
-      <Button className="signup" href="/signup">
-        Sign Up
-      </Button>
+      <Link className="navButton" to="/signin">
+        <Icon type="edit" /> Login In
+      </Link>
+
+      <Link className="navButton" to="/signup">
+        <Icon type="user" /> Sign Up
+      </Link>
     </div>
   );
 };

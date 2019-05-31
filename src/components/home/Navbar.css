@@ -5,41 +5,25 @@
   border-bottom: inset;
   padding: 0;
   margin: 0;
-
   border-color: #e6b30e;
   background-color: #4682b4;
 }
-.search {
-  float: left;
-  width: 300px;
-  margin: 0px;
-  height: 30px;
-  border-color: #e6b30e;
-  margin-top: 15px;
-  color: #e6b30e;
+@font-face {
+  font-family: penguinAttack;
+  src: url(Quirlycues.ttf);
 }
-.postButton {
-  width: 100px;
-  margin-left: 5px;
-  margin-top: 15px;
+.navButton {
+  color: white;
+  padding: 14px;
 
-  border-color: #e6b30e;
-  color: #e6b30e;
+  font-size: 20px;
+  font-weight: ;
 }
-.login {
-  float: right;
-  width: 100px;
+.navLinks {
   margin-top: 15px;
-  margin-right: 0px;
-  border-color: #e6b30e;
-  color: #e6b30e;
+  display: inline-block;
 }
-.signup {
-  float: right;
-  width: 100px;
-  margin-top: 15px;
-  margin-right: 8px;
-  border-color: #e6b30e;
+.navButton:hover {
   color: #e6b30e;
 }
 .logo {
@@ -55,7 +39,6 @@
   margin-right: 5px;
 }
 .signOutButton {
-  float: right;
   width: 100px;
   margin: 0;
   margin-top: 15px;

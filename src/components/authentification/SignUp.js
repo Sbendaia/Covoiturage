@@ -99,7 +99,7 @@ class RegistrationForm extends Component {
               ]
             })(<Input name="email" onChange={this.handleChange} />)}
           </Form.Item>
-          <Form.Item {...formItemLayout} label="Password">
+          <Form.Item {...formItemLayout} label="Mot de passe">
             {getFieldDecorator("password", {
               rules: [
                 {
@@ -118,7 +118,7 @@ class RegistrationForm extends Component {
               />
             )}
           </Form.Item>
-          <Form.Item {...formItemLayout} label="Confirm Password">
+          <Form.Item {...formItemLayout} label="Confirmer Mot de passe">
             {getFieldDecorator("confirm", {
               rules: [
                 {
@@ -131,7 +131,7 @@ class RegistrationForm extends Component {
               ]
             })(<Input type="password" onBlur={this.handleConfirmBlur} />)}
           </Form.Item>
-          <Form.Item {...formItemLayout} label={<span>First Name&nbsp;</span>}>
+          <Form.Item {...formItemLayout} label={<span>Prénom&nbsp;</span>}>
             {getFieldDecorator("firstName", {
               rules: [
                 {
@@ -142,7 +142,7 @@ class RegistrationForm extends Component {
               ]
             })(<Input name="firstName" onChange={this.handleChange} />)}
           </Form.Item>
-          <Form.Item {...formItemLayout} label={<span>Last Name&nbsp;</span>}>
+          <Form.Item {...formItemLayout} label={<span>Nom&nbsp;</span>}>
             {getFieldDecorator("lastName", {
               rules: [
                 {
@@ -153,7 +153,7 @@ class RegistrationForm extends Component {
               ]
             })(<Input name="lastName" onChange={this.handleChange} />)}
           </Form.Item>
-          <Form.Item {...formItemLayout} label="Phone Number">
+          <Form.Item {...formItemLayout} label="Numéro de téléphone">
             {getFieldDecorator("phone", {
               rules: [
                 { required: true, message: "Please input your phone number!" }
@@ -199,7 +199,7 @@ class RegistrationForm extends Component {
           </Form.Item> */}
           <Form.Item {...tailFormItemLayout}>
             <Button type="primary" htmlType="submit">
-              Register
+              S'inscrire
             </Button>
           </Form.Item>
         </Form>

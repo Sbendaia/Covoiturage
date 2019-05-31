@@ -29,7 +29,7 @@ class NormalLoginForm extends Component {
       <div>
         <Row>
           <Col span={12}>
-            <h1 id="titre1">Blah blah blah blah</h1>
+            <h1 id="titre1">Rejoignez-nous</h1>
             <h3 id="content1">
               loAd culpa est non fugiat reprehenderit in consequat laborum.
               Veniam tempor ipsum officia quis exercitation sunt elit dolor ad
@@ -41,7 +41,7 @@ class NormalLoginForm extends Component {
               <Form.Item>
                 {getFieldDecorator("userName", {
                   rules: [
-                    { required: true, message: "Please input your username!" }
+                    { required: true, message: "entez votre identifiant svp!" }
                   ]
                 })(
                   <Input
@@ -49,7 +49,7 @@ class NormalLoginForm extends Component {
                     prefix={
                       <Icon type="user" style={{ color: "rgba(0,0,0,.25)" }} />
                     }
-                    placeholder="Username"
+                    placeholder="Identifiant"
                     onChange={this.handleChange}
                   />
                 )}
@@ -57,7 +57,7 @@ class NormalLoginForm extends Component {
               <Form.Item>
                 {getFieldDecorator("password", {
                   rules: [
-                    { required: true, message: "Please input your Password!" }
+                    { required: true, message: "Entrez votre mot de passe svp" }
                   ]
                 })(
                   <Input
@@ -66,7 +66,7 @@ class NormalLoginForm extends Component {
                       <Icon type="lock" style={{ color: "rgba(0,0,0,.25)" }} />
                     }
                     type="password"
-                    placeholder="Password"
+                    placeholder="Mot de passe"
                     onChange={this.handleChange}
                   />
                 )}
@@ -75,18 +75,18 @@ class NormalLoginForm extends Component {
                 {getFieldDecorator("remember", {
                   valuePropName: "checked",
                   initialValue: true
-                })(<Checkbox>Remember me</Checkbox>)}
+                })(<Checkbox>Se souvenir de moi</Checkbox>)}
                 <a className="login-form-forgot" href="/signup">
-                  Forgot password
+                  Mot de passe oublié ?
                 </a>
                 <Button
                   type="primary"
                   htmlType="submit"
                   className="login-form-button"
                 >
-                  Log in
+                  Se connecter
                 </Button>
-                Or <a href="/signup">register now!</a>
+                Or <a href="/signup">s'inscrire maintenant!</a>
               </Form.Item>
             </Form>
             <div>{authError ? <Alert message={authError} /> : null}</div>
