@@ -1,7 +1,7 @@
 import React from "react";
 import { connect } from "react-redux";
 import { signOut } from "../../store/actions/authActions";
-import { Button, Avatar, Dropdown, Menu } from "antd";
+import { Button, Icon, Dropdown, Menu } from "antd";
 import { Link } from "react-router-dom";
 const SignedInLinks = props => {
   const menu = (
@@ -27,7 +27,7 @@ const SignedInLinks = props => {
   return (
     <div>
       <Dropdown overlay={menu} className="navButton">
-        <Avatar icon="user" size="large" />
+        <Icon type="user" />
       </Dropdown>
     </div>
   );

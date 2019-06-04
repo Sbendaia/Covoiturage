@@ -7,7 +7,7 @@ import { BrowserRouter, Switch, Route } from "react-router-dom";
 import form from "./components/posting/postingForm";
 import AllPost from "./components/posts/AllPost";
 import Mesposts from "./components/user/Mesposts";
-
+import Footer from "./components/home/Footer";
 import Search from "./components/home/Search";
 class App extends Component {
   render() {
@@ -26,6 +26,7 @@ class App extends Component {
             <Route path="/allpost" component={AllPost} />
           </Switch>
         </div>
+        <Footer />
       </BrowserRouter>
     );
   }

@@ -5,8 +5,10 @@
   border-style: solid;
   padding-left: 50px;
   padding-right: 50px;
+  padding-bottom: 10px;
   width: 500px;
   margin-top: 10px;
+  margin-bottom: 30px;
 }
 @font-face {
   font-family: penguinAttack;
@@ -22,8 +24,6 @@
   width: 400px;
 }
 .header {
-  font-family: PenguinAttack;
-
   color: grey;
   padding: 10px;
   text-align: center;
@@ -31,7 +31,6 @@
   font-size: 50px;
 }
 .postingButton {
-  
   width: 100px;
   border-radius: 5px;
   border-style: solid;

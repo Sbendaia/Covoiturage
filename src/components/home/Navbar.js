@@ -19,6 +19,7 @@ class Navbar extends Component {
 
   render() {
     const { profile, auth } = this.props;
+  
     const links = auth.uid ? (
       <SignedInLinks profile={profile} />
     ) : (
@@ -61,8 +62,8 @@ class Navbar extends Component {
 }
 const mapStateToProps = state => {
   return {
-    auth: state.firebase.auth,
-    profile: state.firebase.profile
+    auth: state.firebase.auth
+  
   };
 };
 Navbar.propTypes = {

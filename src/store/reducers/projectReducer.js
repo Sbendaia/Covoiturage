@@ -13,7 +13,12 @@ const projectReducer = (state = initState, action) => {
         ...state,
         ville: action.ville
       };
-
+    case "FAVORIS_SUCCESS":
+      console.log("SUCCESS");
+      return state;
+    case "FAVORIS_FAILED":
+      console.log("FAILED");
+      return state;
     default:
       return state;
   }

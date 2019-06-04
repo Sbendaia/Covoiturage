@@ -5,7 +5,6 @@ import {
   Avatar,
   Timeline,
   Tag,
-  Modal,
   Button,
   Input,
   DatePicker
@@ -29,7 +28,11 @@ export default class Post extends Component {
         let posts = data.map(post => {
           return (
             <div
-              style={{ border: "inset", borderColor: "white" }}
+              style={{
+                border: "inset",
+                borderColor: "white",
+                paddingLeft: "50px"
+              }}
               key={post.id}
             >
               <Comment
@@ -53,34 +56,6 @@ export default class Post extends Component {
                       <Tag color="magenta">Autoroute:{post.autoroute}</Tag>
                     </div>
                     <br />
-                    <Button
-                      type="primary"
-                      onClick={() => {
-                        console.log("hey");
-                        this.setState({
-                          visible: true
-                        });
-                        console.log(this.state.visible);
-                      }}
-                    >
-                      Contact Me
-                    </Button>
-                    <Modal
-                      title="My Phone Number is "
-                      visible={this.state.visible}
-                      onOk={() => {
-                        this.setState({
-                          visible: false
-                        });
-                      }}
-                      onCancel={() => {
-                        this.setState({
-                          visible: false
-                        });
-                      }}
-                    >
-                      <span>+212...</span>
-                    </Modal>
                   </div>
                 }
                 datetime={
@@ -107,7 +82,12 @@ export default class Post extends Component {
   render() {
     return (
       <div>
-        <div style={{ marginBottom: "10px", marginRight: "20px" }}>
+        <div
+          style={{
+            marginBottom: "10px",
+            marginRight: "20px"
+          }}
+        >
           <h1 style={{ color: "grey", textAlign: "center" }}>
             Trouver une destination
           </h1>

@@ -5,11 +5,11 @@ const SignedOutLinks = () => {
   return (
     <div>
       <Link className="navButton" to="/signin">
-        <Icon type="edit" /> Login In
+        <Icon type="edit" /> S'identifier
       </Link>
 
       <Link className="navButton" to="/signup">
-        <Icon type="user" /> Sign Up
+        <Icon type="user" /> S'inscrire
       </Link>
     </div>
   );
