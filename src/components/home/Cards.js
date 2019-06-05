@@ -4,13 +4,11 @@ import { Card, Col, Row } from "antd";
 export default class Cards extends Component {
   render() {
     return (
-      <div
-        style={{ background: "#4682B4", padding: "30px", marginTop: "10px" }}
-      >
+      <div style={{ padding: "30px", marginTop: "10px" }}>
         <Row gutter={16}>
           <Col span={8}>
             <Card
-              title={<span style={{ color: "#e6b30e" }}>Find a ride</span>}
+              title={<span style={{ color: "#e6b30e" }}>S'inscrire</span>}
               bordered={true}
               extra={
                 <a href="#" style={{ color: "#4682B4" }}>
@@ -24,7 +22,7 @@ export default class Cards extends Component {
           </Col>
           <Col span={8}>
             <Card
-              title={<span style={{ color: "#e6b30e" }}>Post a ride</span>}
+              title={<span style={{ color: "#e6b30e" }}>S'identifier </span>}
               bordered={true}
               extra={
                 <a href="/form" style={{ color: "#4682B4" }}>
@@ -37,9 +35,7 @@ export default class Cards extends Component {
           </Col>
           <Col span={8}>
             <Card
-              title={
-                <span style={{ color: "#e6b30e" }}>Try our suggetions</span>
-              }
+              title={<span style={{ color: "#e6b30e" }}>Chercher</span>}
               bordered={true}
               extra={
                 <a href="#" style={{ color: "#4682B4" }}>

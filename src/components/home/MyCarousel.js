@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import { Carousel } from "antd";
 import "./MyCarousel.css";
 import road from "./road.jpg";
-import meet from "./meet.jpg";
+// import meet from "./meet.jpg";
 import ride from "./ride.jpg";
 
 export default class MyCarousel extends Component {
@@ -18,7 +18,7 @@ export default class MyCarousel extends Component {
           <div>
             <h1>
               {" "}
-              <img src={meet} />
+              <img src={ride} />
             </h1>
           </div>
           <div>

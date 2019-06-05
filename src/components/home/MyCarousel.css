@@ -6,6 +6,7 @@
   background: #e6b30e;
   overflow: hidden;
   margin-top: 5px;
+  margin-bottom: 15px;
 }
 .ant-carousel .slick-slide h1 {
   color: #fff;

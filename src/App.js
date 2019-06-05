@@ -9,6 +9,7 @@ import AllPost from "./components/posts/AllPost";
 import Mesposts from "./components/user/Mesposts";
 import Footer from "./components/home/Footer";
 import Search from "./components/home/Search";
+import Home from "./components/home/Home";
 class App extends Component {
   render() {
     return (
@@ -17,12 +18,13 @@ class App extends Component {
 
         <div>
           <Switch>
-            {/* <Route exact path="/" component={Home} /> */}
+            <Route exact path="/" component={Home} />
             <Route path="/signin" component={SignIn} />
             <Route path="/mesAnnonces" component={Mesposts} />
             <Route path="/form" component={form} />
             <Route strict exact path="/search" component={Search} />
             <Route path="/signup" component={SignUp} />
+
             <Route path="/allpost" component={AllPost} />
           </Switch>
         </div>

@@ -10,10 +10,6 @@
   margin-top: 10px;
   margin-bottom: 30px;
 }
-@font-face {
-  font-family: penguinAttack;
-  src: url(Quirlycues.ttf);
-}
 
 #villeA,
 #villeD,
@@ -24,15 +20,16 @@
   width: 400px;
 }
 .header {
-  color: grey;
+  color: #e6b30e;
   padding: 10px;
   text-align: center;
   margin-top: 0px;
-  font-size: 50px;
+  font-size: 40px;
 }
 .postingButton {
   width: 100px;
   border-radius: 5px;
   border-style: solid;
   border-color: #e6b30e;
+  background-color: #e6b30e;
 }
