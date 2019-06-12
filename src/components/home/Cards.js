@@ -4,7 +4,12 @@ import { Card, Col, Row } from "antd";
 export default class Cards extends Component {
   render() {
     return (
-      <div style={{ padding: "30px", marginTop: "10px" }}>
+      <div
+        style={{
+          padding: "30px",
+          marginTop: "10px"
+        }}
+      >
         <Row gutter={16}>
           <Col span={8}>
             <Card
@@ -16,8 +21,7 @@ export default class Cards extends Component {
                 </a>
               }
             >
-              Easy way to find rides ,with good prices hhhhhhhhhhhhh ..... bla
-              bla bla
+              Créer votre compte Dini m3ak
             </Card>
           </Col>
           <Col span={8}>
@@ -30,7 +34,7 @@ export default class Cards extends Component {
                 </a>
               }
             >
-              Save your rides , and share with them with others ...bla bla bla
+              S'identifier et poster une annonce
             </Card>
           </Col>
           <Col span={8}>
@@ -38,13 +42,12 @@ export default class Cards extends Component {
               title={<span style={{ color: "#e6b30e" }}>Chercher</span>}
               bordered={true}
               extra={
-                <a href="#" style={{ color: "#4682B4" }}>
+                <a href="/allpost" style={{ color: "#4682B4" }}>
                   Go
                 </a>
               }
             >
-              Our team is going to suggest you some good rides with perfect
-              prices ..... bla bla bla bla
+              Trouver votre destination facilement avec Dini M3ak
             </Card>
           </Col>
         </Row>

@@ -1,15 +1,20 @@
+import { getFirebase } from "react-redux-firebase";
+
 export const postARide = post => {
   return (dispatch, getState, { getFirestore }) => {
     const firestore = getFirestore();
-    // const profile = getState().firebase.profile;
+    const firebase = getFirebase();
+    const profile = getState().firebase.profile;
     const authorId = getState().firebase.auth.uid;
+
     firestore
       .collection("posts")
       .add({
         ...post,
-        authorFirstName: "siham",
-        authorLastName: "bendaia",
+        authorFirstName: profile.firstName,
+        authorLastName: profile.lastName,
         authorId: authorId,
+        GSM: profile.GSM,
         createdAt: new Date()
       })
       .then(() => {
@@ -42,6 +47,24 @@ export const addFavoris = post => {
       })
       .catch(err => {
         dispatch({ type: "FAVORIS_FAILED" }, err);
+      });
+  };
+};
+export const contactUs = post => {
+  return (dispatch, getState, { getFirestore }) => {
+    const firestore = getFirestore();
+
+    firestore
+      .collection("messages")
+      .add({
+        ...post,
+        sentAt: new Date()
+      })
+      .then(() => {
+        dispatch({ type: "CONTACT_US_SUCCESS" });
+      })
+      .catch(err => {
+        dispatch({ type: "CONTACT_US_FAILED" }, err);
       });
   };
 };

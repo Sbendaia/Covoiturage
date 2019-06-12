@@ -10,6 +10,7 @@ import Mesposts from "./components/user/Mesposts";
 import Footer from "./components/home/Footer";
 import Search from "./components/home/Search";
 import Home from "./components/home/Home";
+import ContactUs from "./components/home/ContactUs";
 class App extends Component {
   render() {
     return (
@@ -24,7 +25,7 @@ class App extends Component {
             <Route path="/form" component={form} />
             <Route strict exact path="/search" component={Search} />
             <Route path="/signup" component={SignUp} />
-
+            <Route path="/ContactUs" component={ContactUs} />
             <Route path="/allpost" component={AllPost} />
           </Switch>
         </div>

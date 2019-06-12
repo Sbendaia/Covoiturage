@@ -7,7 +7,8 @@ import {
   Tag,
   Button,
   Input,
-  DatePicker
+  DatePicker,
+  notification
 } from "antd";
 import moment from "moment";
 
@@ -29,9 +30,13 @@ export default class Post extends Component {
           return (
             <div
               style={{
-                border: "inset",
-                borderColor: "white",
-                paddingLeft: "50px"
+                borderStyle: "solid",
+                borderColor: "#C6C6C6",
+                borderCollapse: "collapse",
+
+                paddingLeft: "50px",
+                width: "600px",
+                marginLeft: "25%"
               }}
               key={post.id}
             >
@@ -46,16 +51,35 @@ export default class Post extends Component {
                 content={
                   <div>
                     <br />
-                    <Timeline>
+                    <Timeline style={{ height: "30px" }}>
                       <Timeline.Item>{post.villeD}</Timeline.Item>
                       <Timeline.Item>{post.villeA}</Timeline.Item>
                     </Timeline>
                     <div>
                       {" "}
-                      <Tag color="magenta">nombre de siége{post.nbSiege}</Tag>
-                      <Tag color="magenta">Autoroute:{post.autoroute}</Tag>
+                      <Tag color="magenta">
+                        Nombre de siége : {post.nbSiege}
+                      </Tag>
+                      <Tag color="magenta">Autoroute : {post.autoroute}</Tag>
+                      <Tag color="magenta">Prix : {post.prix} DH</Tag>
                     </div>
                     <br />
+                    <Button
+                      type="primary"
+                      onClick={() => {
+                        notification.open({
+                          message: "Notification Title",
+                          description:
+                            "This is the content of the notification. This is the content of the notification. This is the content of the notification.",
+                          onClick: () => {
+                            console.log("Notification Clicked!");
+                          }
+                        });
+                      }}
+                    >
+                      Contacter
+                    </Button>
+                    ,
                   </div>
                 }
                 datetime={
@@ -84,8 +108,8 @@ export default class Post extends Component {
       <div>
         <div
           style={{
-            marginBottom: "10px",
-            marginRight: "20px"
+            marginBottom: "50px",
+            marginLeft: "8%"
           }}
         >
           <h1 style={{ color: "grey", textAlign: "center" }}>
@@ -94,14 +118,18 @@ export default class Post extends Component {
           <Input
             name="villeD"
             style={inputStyle}
-            placeHolder="ville de départ"
+            placeHolder="Ville de départ"
           />
           <Input
             name="villeA"
             style={inputStyle}
-            placeHolder="ville d'arrivée"
+            placeHolder="Ville d'arrivée"
           />
-          <DatePicker onChange={this.onChange} style={inputStyle} />
+          <DatePicker
+            onChange={this.onChange}
+            style={inputStyle}
+            placeHolder="Choisir une date "
+          />
           <Button type="primary" icon="search">
             Search
           </Button>

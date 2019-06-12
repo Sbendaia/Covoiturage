@@ -1,20 +1,24 @@
 import React, { Component } from "react";
-import { Steps, Button, message } from "antd";
+import { Steps, Button, message, Icon } from "antd";
 import "./HowItWorks.css";
 const { Step } = Steps;
+// const icon1=<Icon type="phone"/>;
+// const icon2=
 
 const steps = [
   {
     title: "S'inscrire",
-    content: "First-content"
+    content:
+      "Créer votre Compte Dini m3ak et bénéficier de la possibilité de publier votre propre annonces , Ne perdez jamais votre chance de gagner plus d'argent !! "
   },
   {
     title: "Chercher une annonces",
-    content: "Second-content"
+    content:
+      "Chercher des annonces et voyager confortablement et avec des bons prix avec Dini m3ak "
   },
   {
     title: "Appeler ",
-    content: "Last-content"
+    content: "Vous étes intéressés par une annonce ? appelez la personne  "
   }
 ];
 
@@ -44,11 +48,20 @@ export default class HowItWorks extends Component {
             <Step key={item.title} title={item.title} />
           ))}
         </Steps>
-        <div className="steps-content">{steps[current].content}</div>
+        <div
+          className="steps-content"
+          style={{
+            backgroundColor: "#4682B4",
+            color: "white",
+            fontSize: "30px"
+          }}
+        >
+          {steps[current].content}
+        </div>
         <div className="steps-action">
           {current < steps.length - 1 && (
             <Button type="primary" onClick={() => this.next()}>
-              Next
+              Suivant
             </Button>
           )}
           {current === steps.length - 1 && (
@@ -56,12 +69,12 @@ export default class HowItWorks extends Component {
               type="primary"
               onClick={() => message.success("Processing complete!")}
             >
-              Done
+              Terminé
             </Button>
           )}
           {current > 0 && (
             <Button style={{ marginLeft: 8 }} onClick={() => this.prev()}>
-              Previous
+              Précédent
             </Button>
           )}
         </div>

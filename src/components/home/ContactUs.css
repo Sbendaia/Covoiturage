@@ -1,0 +1,30 @@
+.container {
+  max-width: 800px;
+  box-shadow: 0 0 20px #4682b4;
+  background: #f7f8f8;
+  margin-left: 18%;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  padding: 8px;
+  border-radius: 5px;
+}
+
+.infos {
+  padding-left: 20px;
+}
+
+.contactForm {
+  padding-right: 20px;
+}
+.contactButton {
+  width: 100%;
+  border-radius: 5px;
+  border-style: solid;
+  border-color: #e6b30e;
+  background-color: #e6b30e;
+  color: white;
+}
+h1 {
+  color: #e6b30e;
+  margin-left: 20px;
+}

@@ -16,6 +16,12 @@ const projectReducer = (state = initState, action) => {
     case "FAVORIS_SUCCESS":
       console.log("SUCCESS");
       return state;
+    case "CONTACT_US_FAILED":
+      console.log("FAILED");
+      return state;
+    case "CONTACT_US_SUCCESS":
+      console.log("SUCCESS");
+      return state;
     case "FAVORIS_FAILED":
       console.log("FAILED");
       return state;

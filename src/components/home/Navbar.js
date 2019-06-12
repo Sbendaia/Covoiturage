@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { Icon, Col, Row } from "antd";
 import "antd/dist/antd.css";
-import logow from "./logow.png";
+import logow from "./dini.png";
 import { connect } from "react-redux";
 import "./Navbar.css";
 import SignedInLinks from "./SignedInLinks";
@@ -19,7 +19,7 @@ class Navbar extends Component {
 
   render() {
     const { profile, auth } = this.props;
-  
+
     const links = auth.uid ? (
       <SignedInLinks profile={profile} />
     ) : (
@@ -29,7 +29,9 @@ class Navbar extends Component {
     return (
       <Row className="navbar">
         <Col span={6}>
-          <img src={logow} className="logo" alt="" />
+          <Link to="/">
+            <img src={logow} className="logo" alt="" />
+          </Link>
         </Col>
         <Col span={18}>
           <ul style={{ float: "right" }}>
@@ -49,7 +51,7 @@ class Navbar extends Component {
             <li className="navLinks">{links}</li>
             <li className="navLinks">
               {" "}
-              <Link className="navButton" to="#">
+              <Link className="navButton" to="/ContactUs">
                 <Icon type="message" /> {""}
                 Nous Contacter
               </Link>
@@ -63,7 +65,6 @@ class Navbar extends Component {
 const mapStateToProps = state => {
   return {
     auth: state.firebase.auth
-  
   };
 };
 Navbar.propTypes = {

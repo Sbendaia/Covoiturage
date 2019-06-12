@@ -11,7 +11,7 @@ export default class MyCarousel extends Component {
       <div>
         <Carousel autoplay>
           <div>
-            <h1>
+            <h1 >
               <img src={ride} />
             </h1>
           </div>

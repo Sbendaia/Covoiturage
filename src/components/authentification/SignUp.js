@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Form, Input, Button } from "antd";
+import { Form, Input, Button, notification } from "antd";
 import { connect } from "react-redux";
 // import { Redirect } from "react-router-dom";
 import "./SignUp.css";
@@ -30,6 +30,14 @@ class RegistrationForm extends Component {
     });
     console.log(this.state.firstName);
     this.props.signUp(this.state);
+    const openNotificationWithIcon = type => {
+      notification[type]({
+        message: "Success",
+        description:
+          "Merci de nous avoir  contacter !  nous vous répondons dans les plus brefs délais."
+      });
+    };
+    openNotificationWithIcon("success");
   };
 
   handleConfirmBlur = e => {

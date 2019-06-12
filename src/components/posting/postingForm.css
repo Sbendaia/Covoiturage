@@ -1,14 +1,17 @@
 .postingForm {
   margin-left: 30%;
-  border-color: grey;
+
   border-radius: 5px;
-  border-style: solid;
+
   padding-left: 50px;
+  border-color: #4682b4;
   padding-right: 50px;
   padding-bottom: 10px;
   width: 500px;
   margin-top: 10px;
   margin-bottom: 30px;
+  box-shadow: 0 0 20px 0 #4682b4;
+  background: #f7f8f8;
 }
 
 #villeA,
@@ -24,7 +27,8 @@
   padding: 10px;
   text-align: center;
   margin-top: 0px;
-  font-size: 40px;
+  font-size: 30px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 .postingButton {
   width: 100px;

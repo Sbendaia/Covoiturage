@@ -57,7 +57,7 @@ class NormalLoginForm extends Component {
               <Form.Item>
                 {getFieldDecorator("password", {
                   rules: [
-                    { required: true, message: "Entrez votre mot de passe svp" }
+                    { required: true, message: "Entrez votre mot de passe Svp" }
                   ]
                 })(
                   <Input
@@ -86,7 +86,7 @@ class NormalLoginForm extends Component {
                 >
                   Se connecter
                 </Button>
-                Or <a href="/signup">s'inscrire maintenant!</a>
+                Ou <a href="/signup">s'inscrire maintenant!</a>
               </Form.Item>
             </Form>
             <div>{authError ? <Alert message={authError} /> : null}</div>

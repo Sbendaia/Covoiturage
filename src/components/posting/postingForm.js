@@ -46,13 +46,13 @@ class Formulaire extends Component {
     const { auth } = this.props;
     if (!auth.uid) return <Redirect to="/signIn" />;
     return (
-      <div>
+      <div className="postingForm">
         <h1 className="header">Publier votre annonce</h1>
-        <Form className="postingForm">
-          <Form.Item label={<span>Ville de Départ&nbsp;</span>}>
+        <Form>
+          <Form.Item label={<span>Ville de départ&nbsp;</span>}>
             <Input name="villeD" onChange={this.handleChange} allowClear />{" "}
           </Form.Item>
-          <Form.Item label={<span>Villde d'arrivée&nbsp;</span>}>
+          <Form.Item label={<span>Ville d'arrivée&nbsp;</span>}>
             <Input name="villeA" onChange={this.handleChange} allowClear />
           </Form.Item>
           <Form.Item label={<span>Date&nbsp;</span>}>
@@ -61,7 +61,7 @@ class Formulaire extends Component {
           <Form.Item label={<span> Nombre de siége&nbsp;</span>}>
             <Input name="nbSiege" onChange={this.handleChange} />
           </Form.Item>
-          <Form.Item label={<span>autoroute&nbsp;</span>}>
+          <Form.Item label={<span>Autoroute&nbsp;</span>}>
             <Select
               onChange={value => {
                 this.handleSelect(value);
